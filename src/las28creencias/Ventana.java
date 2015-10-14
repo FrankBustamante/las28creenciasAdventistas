@@ -6,20 +6,21 @@
 package las28creencias;
 
 import java.awt.Color;
-import java.util.ListIterator;
-
+import javax.swing.DefaultListModel;
 /**
  *
  * @author LDS
  */
 public class Ventana extends javax.swing.JFrame {
 
-    Metodos ob = new Metodos();
-    
+    Metodos operacion = new Metodos();
+    DefaultListModel Lista;
     public Ventana() {
         getContentPane().setBackground(Color.white);
         initComponents();
-        ob.agregar();
+        operacion.agregar();
+        Lista = new DefaultListModel();
+        jList1.setModel(Lista);
     }
 
     /**
@@ -33,44 +34,22 @@ public class Ventana extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel29 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("28 Creencias de La Iglesia Adventista Del Septimo Dia");
+        setTitle("creencias de La Iglesia Adventista");
         setBackground(new java.awt.Color(255, 255, 255));
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 51, 51));
         jButton1.setText("ORDEN");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -79,97 +58,15 @@ public class Ventana extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(51, 51, 51));
         jButton2.setText("DESORDEN");
         jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-
-        jLabel1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel3.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel4.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel5.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel6.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel7.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel8.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel9.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel10.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel11.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel12.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel13.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel14.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel15.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel16.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel17.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel18.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel19.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel20.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel21.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel22.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel23.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel24.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel25.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel26.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel27.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(255, 204, 0));
-
-        jLabel28.setFont(new java.awt.Font("Perpetua Titling MT", 1, 11)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(255, 204, 0));
 
         jLabel29.setBackground(new java.awt.Color(255, 255, 255));
         jLabel29.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 14)); // NOI18N
@@ -178,194 +75,126 @@ public class Ventana extends javax.swing.JFrame {
         jLabel29.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.gray, java.awt.Color.black));
         jLabel29.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        jList1.setBackground(new java.awt.Color(255, 255, 153));
+        jList1.setForeground(new java.awt.Color(0, 153, 153));
+        jList1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jScrollPane1.setViewportView(jList1);
+
+        jLabel1.setFont(new java.awt.Font("Serif", 3, 18)); // NOI18N
+        jLabel1.setText("Las 28 Creencias De ");
+
+        jLabel2.setFont(new java.awt.Font("Serif", 3, 24)); // NOI18N
+        jLabel2.setText("la  Iglesia Adventista  Del Séptimo Día");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(49, 62, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(134, 134, 134)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(280, 280, 280)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(99, 99, 99))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(140, 140, 140)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(310, 310, 310)
-                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(194, Short.MAX_VALUE))
+                        .addGap(93, 93, 93)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(82, 82, 82))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(125, 125, 125))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel2)
+                .addGap(25, 25, 25)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(9, 9, 9)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
                 .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38))
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       int k=0;
-        jLabel1.setText(ob.ordenarCreencias(k));k=1;
-        jLabel2.setText(ob.ordenarCreencias(k));k=2;
-        jLabel3.setText(ob.ordenarCreencias(k));k=3;
-        jLabel4.setText(ob.ordenarCreencias(k));k=4;
-        jLabel5.setText(ob.ordenarCreencias(k));k=5;
-        jLabel6.setText(ob.ordenarCreencias(k));k=6;
-        jLabel7.setText(ob.ordenarCreencias(k));k=7;
-        jLabel8.setText(ob.ordenarCreencias(k));k=8;
-        jLabel9.setText(ob.ordenarCreencias(k));k=9;
-        jLabel10.setText(ob.ordenarCreencias(k));k=10;
-        jLabel11.setText(ob.ordenarCreencias(k));k=11;
-        jLabel12.setText(ob.ordenarCreencias(k));k=12;
-        jLabel13.setText(ob.ordenarCreencias(k));k=13;
-        jLabel14.setText(ob.ordenarCreencias(k));k=14;
-        jLabel15.setText(ob.ordenarCreencias(k));k=15;
-        jLabel16.setText(ob.ordenarCreencias(k));k=16;
-        jLabel17.setText(ob.ordenarCreencias(k));k=17;
-        jLabel18.setText(ob.ordenarCreencias(k));k=18;
-        jLabel19.setText(ob.ordenarCreencias(k));k=19;
-        jLabel20.setText(ob.ordenarCreencias(k));k=20;
-        jLabel21.setText(ob.ordenarCreencias(k));k=21;
-        jLabel22.setText(ob.ordenarCreencias(k));k=22;
-        jLabel23.setText(ob.ordenarCreencias(k));k=23;
-        jLabel24.setText(ob.ordenarCreencias(k));k=24;
-        jLabel25.setText(ob.ordenarCreencias(k));k=25;
-        jLabel26.setText(ob.ordenarCreencias(k));k=26;
-        jLabel27.setText(ob.ordenarCreencias(k));k=27;
-        jLabel28.setText(ob.ordenarCreencias(k));
+        Lista.clear();
+        Lista.addElement(operacion.ordenarCreencias(0));
+        Lista.addElement(operacion.ordenarCreencias(1));
+        Lista.addElement(operacion.ordenarCreencias(2));
+        Lista.addElement(operacion.ordenarCreencias(3));
+        Lista.addElement(operacion.ordenarCreencias(4));
+        Lista.addElement(operacion.ordenarCreencias(5));
+        Lista.addElement(operacion.ordenarCreencias(6));
+        Lista.addElement(operacion.ordenarCreencias(7));
+        Lista.addElement(operacion.ordenarCreencias(8));
+        Lista.addElement(operacion.ordenarCreencias(9));
+        Lista.addElement(operacion.ordenarCreencias(10));
+        Lista.addElement(operacion.ordenarCreencias(11));
+        Lista.addElement(operacion.ordenarCreencias(12));
+        Lista.addElement(operacion.ordenarCreencias(13));
+        Lista.addElement(operacion.ordenarCreencias(14));
+        Lista.addElement(operacion.ordenarCreencias(15));
+        Lista.addElement(operacion.ordenarCreencias(16));
+        Lista.addElement(operacion.ordenarCreencias(17));
+        Lista.addElement(operacion.ordenarCreencias(18));
+        Lista.addElement(operacion.ordenarCreencias(19));
+        Lista.addElement(operacion.ordenarCreencias(20));
+        Lista.addElement(operacion.ordenarCreencias(21));
+        Lista.addElement(operacion.ordenarCreencias(22));
+        Lista.addElement(operacion.ordenarCreencias(23));
+        Lista.addElement(operacion.ordenarCreencias(24));
+        Lista.addElement(operacion.ordenarCreencias(25));
+        Lista.addElement(operacion.ordenarCreencias(26));
+        Lista.addElement(operacion.ordenarCreencias(27));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        int k=0;
-        jLabel1.setText(ob.desordenarCreencias(k));k=1;
-        jLabel2.setText(ob.desordenarCreencias(k));k=2;
-        jLabel3.setText(ob.desordenarCreencias(k));k=3;
-        jLabel4.setText(ob.desordenarCreencias(k));k=4;
-        jLabel5.setText(ob.desordenarCreencias(k));k=5;
-        jLabel8.setText(ob.desordenarCreencias(k));k=6;
-        jLabel20.setText(ob.desordenarCreencias(k));k=7;
-        jLabel6.setText(ob.desordenarCreencias(k));k=8;
-        jLabel9.setText(ob.desordenarCreencias(k));k=9;
-        jLabel10.setText(ob.desordenarCreencias(k));k=10;
-        jLabel24.setText(ob.desordenarCreencias(k));k=11;
-        jLabel12.setText(ob.desordenarCreencias(k));k=12;
-        jLabel13.setText(ob.desordenarCreencias(k));k=13;
-        jLabel14.setText(ob.desordenarCreencias(k));k=14;
-        jLabel28.setText(ob.desordenarCreencias(k));k=15;
-        jLabel16.setText(ob.desordenarCreencias(k));k=16;
-        jLabel17.setText(ob.desordenarCreencias(k));k=17;
-        jLabel18.setText(ob.desordenarCreencias(k));k=18;
-        jLabel25.setText(ob.desordenarCreencias(k));k=19;
-        jLabel7.setText(ob.desordenarCreencias(k));k=20;
-        jLabel21.setText(ob.desordenarCreencias(k));k=21;
-        jLabel22.setText(ob.desordenarCreencias(k));k=22;
-        jLabel23.setText(ob.desordenarCreencias(k));k=23;
-        jLabel11.setText(ob.desordenarCreencias(k));k=24;
-        jLabel19.setText(ob.desordenarCreencias(k));k=25;
-        jLabel26.setText(ob.desordenarCreencias(k));k=26;
-        jLabel27.setText(ob.desordenarCreencias(k));k=27;
-        jLabel15.setText(ob.desordenarCreencias(k));
+        Lista.clear();
+        Lista.addElement(operacion.desordenarCreencias(0));
+        Lista.addElement(operacion.desordenarCreencias(1));
+        Lista.addElement(operacion.desordenarCreencias(2));
+        Lista.addElement(operacion.desordenarCreencias(3));
+        Lista.addElement(operacion.desordenarCreencias(4));
+        Lista.addElement(operacion.desordenarCreencias(5));
+        Lista.addElement(operacion.desordenarCreencias(6));
+        Lista.addElement(operacion.desordenarCreencias(7));
+        Lista.addElement(operacion.desordenarCreencias(8));
+        Lista.addElement(operacion.desordenarCreencias(9));
+        Lista.addElement(operacion.desordenarCreencias(10));
+        Lista.addElement(operacion.desordenarCreencias(11));
+        Lista.addElement(operacion.desordenarCreencias(12));
+        Lista.addElement(operacion.desordenarCreencias(13));
+        Lista.addElement(operacion.desordenarCreencias(14));
+        Lista.addElement(operacion.desordenarCreencias(15));
+        Lista.addElement(operacion.desordenarCreencias(16));
+        Lista.addElement(operacion.desordenarCreencias(17));
+        Lista.addElement(operacion.desordenarCreencias(18));
+        Lista.addElement(operacion.desordenarCreencias(19));
+        Lista.addElement(operacion.desordenarCreencias(20));
+        Lista.addElement(operacion.desordenarCreencias(21));
+        Lista.addElement(operacion.desordenarCreencias(22));
+        Lista.addElement(operacion.desordenarCreencias(23));
+        Lista.addElement(operacion.desordenarCreencias(24));
+        Lista.addElement(operacion.desordenarCreencias(25));
+        Lista.addElement(operacion.desordenarCreencias(26));
+        Lista.addElement(operacion.desordenarCreencias(27));
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -406,34 +235,10 @@ public class Ventana extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    public static transient volatile javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    public transient volatile javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel29;
-    public transient volatile javax.swing.JLabel jLabel3;
-    public transient volatile javax.swing.JLabel jLabel4;
-    public transient volatile javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JList jList1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
