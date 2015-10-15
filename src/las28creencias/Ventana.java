@@ -7,6 +7,7 @@ package las28creencias;
 
 import java.awt.Color;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 /**
  *
  * @author LDS
@@ -39,6 +40,10 @@ public class Ventana extends javax.swing.JFrame {
         jList1 = new javax.swing.JList();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("creencias de La Iglesia Adventista");
@@ -86,31 +91,60 @@ public class Ventana extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Serif", 3, 24)); // NOI18N
         jLabel2.setText("la  Iglesia Adventista  Del Séptimo Día");
 
+        jButton3.setText("Buscar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Buscar creencia por numero");
+
+        jButton4.setText("Nueva busqueda");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(49, 62, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(99, 99, 99))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(93, 93, 93)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(82, 82, 82))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(125, 125, 125))))
+                        .addGap(125, 125, 125))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(102, 102, 102))))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(92, 92, 92)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton4)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,15 +153,23 @@ public class Ventana extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(25, 25, 25)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addContainerGap())
+                    .addComponent(jButton1)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
+                .addGap(16, 16, 16))
         );
 
         pack();
@@ -135,67 +177,60 @@ public class Ventana extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Lista.clear();
-        Lista.addElement(operacion.ordenarCreencias(0));
-        Lista.addElement(operacion.ordenarCreencias(1));
-        Lista.addElement(operacion.ordenarCreencias(2));
-        Lista.addElement(operacion.ordenarCreencias(3));
-        Lista.addElement(operacion.ordenarCreencias(4));
-        Lista.addElement(operacion.ordenarCreencias(5));
-        Lista.addElement(operacion.ordenarCreencias(6));
-        Lista.addElement(operacion.ordenarCreencias(7));
-        Lista.addElement(operacion.ordenarCreencias(8));
-        Lista.addElement(operacion.ordenarCreencias(9));
-        Lista.addElement(operacion.ordenarCreencias(10));
-        Lista.addElement(operacion.ordenarCreencias(11));
-        Lista.addElement(operacion.ordenarCreencias(12));
-        Lista.addElement(operacion.ordenarCreencias(13));
-        Lista.addElement(operacion.ordenarCreencias(14));
-        Lista.addElement(operacion.ordenarCreencias(15));
-        Lista.addElement(operacion.ordenarCreencias(16));
-        Lista.addElement(operacion.ordenarCreencias(17));
-        Lista.addElement(operacion.ordenarCreencias(18));
-        Lista.addElement(operacion.ordenarCreencias(19));
-        Lista.addElement(operacion.ordenarCreencias(20));
-        Lista.addElement(operacion.ordenarCreencias(21));
-        Lista.addElement(operacion.ordenarCreencias(22));
-        Lista.addElement(operacion.ordenarCreencias(23));
-        Lista.addElement(operacion.ordenarCreencias(24));
-        Lista.addElement(operacion.ordenarCreencias(25));
-        Lista.addElement(operacion.ordenarCreencias(26));
-        Lista.addElement(operacion.ordenarCreencias(27));
+        for (int i = 0; i < 28; i++) {
+            Lista.addElement(operacion.ordenarCreencias(i));
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Lista.clear();
-        Lista.addElement(operacion.desordenarCreencias(0));
-        Lista.addElement(operacion.desordenarCreencias(1));
-        Lista.addElement(operacion.desordenarCreencias(2));
-        Lista.addElement(operacion.desordenarCreencias(3));
-        Lista.addElement(operacion.desordenarCreencias(4));
-        Lista.addElement(operacion.desordenarCreencias(5));
-        Lista.addElement(operacion.desordenarCreencias(6));
-        Lista.addElement(operacion.desordenarCreencias(7));
-        Lista.addElement(operacion.desordenarCreencias(8));
-        Lista.addElement(operacion.desordenarCreencias(9));
-        Lista.addElement(operacion.desordenarCreencias(10));
-        Lista.addElement(operacion.desordenarCreencias(11));
-        Lista.addElement(operacion.desordenarCreencias(12));
-        Lista.addElement(operacion.desordenarCreencias(13));
-        Lista.addElement(operacion.desordenarCreencias(14));
-        Lista.addElement(operacion.desordenarCreencias(15));
-        Lista.addElement(operacion.desordenarCreencias(16));
-        Lista.addElement(operacion.desordenarCreencias(17));
-        Lista.addElement(operacion.desordenarCreencias(18));
-        Lista.addElement(operacion.desordenarCreencias(19));
-        Lista.addElement(operacion.desordenarCreencias(20));
-        Lista.addElement(operacion.desordenarCreencias(21));
-        Lista.addElement(operacion.desordenarCreencias(22));
-        Lista.addElement(operacion.desordenarCreencias(23));
-        Lista.addElement(operacion.desordenarCreencias(24));
-        Lista.addElement(operacion.desordenarCreencias(25));
-        Lista.addElement(operacion.desordenarCreencias(26));
-        Lista.addElement(operacion.desordenarCreencias(27));
+        for (int i = 0; i < 28; i++) {
+            Lista.addElement(operacion.desordenarCreencias(i));
+        }     
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       try
+       {
+           int num;
+           num = Integer.parseInt(jTextField1.getText());
+           if(num>28)
+           { 
+               Lista.addElement(operacion.buscarI(num));
+               for (int i = 0; i < Lista.getSize()-1; i++) {
+                   for (int j = i+1; j < Lista.getSize(); j++) {
+                       if(Lista.get(i)==Lista.get(j))
+                       {
+                         Lista.remove(i);
+                       }
+                   }
+               } 
+           }
+           else
+           {
+               
+                Lista.addElement(operacion.buscarI(num));
+              for (int i = 0; i < Lista.getSize()-1; i++) {
+                   for (int j = i+1; j < Lista.getSize(); j++) {
+                       if(Lista.get(i)==Lista.get(j))
+                        {
+                         Lista.remove(i);
+                        }
+                    }
+                }
+            }
+       }
+       catch(Exception errordato)
+       {
+           JOptionPane.showMessageDialog(null, "dato erroneo\n ingrese solo numeros", "ERROR!", WIDTH);
+           jTextField1.setText("");
+       }
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Lista.clear();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,14 +266,18 @@ public class Ventana extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
