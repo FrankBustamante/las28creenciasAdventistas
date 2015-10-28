@@ -146,4 +146,22 @@ public class Metodos {
      
       return busqueda;
     }
+    
+    String OrdenarInsercion(int k)
+    {
+        for (int i = 1; i < indice.length; i++) 
+        {
+           int aux = indice[i];
+           String text = creencias[i];
+            for (int j = i-1; j >=0 && indice[j]>aux; j--)
+            {
+                indice[j+1]=indice[j];
+                indice[j]=aux;
+                
+                creencias[j+1]=creencias[j];
+                creencias[j]=text;
+            }
+       }
+           return creencias[k];
+        }
 }
