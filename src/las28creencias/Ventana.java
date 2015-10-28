@@ -196,7 +196,8 @@ public class Ventana extends javax.swing.JFrame {
            num = Integer.parseInt(jTextField1.getText());
            if(num>28)
            { 
-               Lista.addElement(operacion.buscarI(num));
+               Lista.addElement(operacion.BusquedaBinaria(num));
+               
                for (int i = 0; i < Lista.getSize()-1; i++) {
                    for (int j = i+1; j < Lista.getSize(); j++) {
                        if(Lista.get(i)==Lista.get(j))
@@ -209,7 +210,7 @@ public class Ventana extends javax.swing.JFrame {
            else
            {
                
-                Lista.addElement(operacion.buscarI(num));
+               Lista.addElement(operacion.BusquedaBinaria(num));
               for (int i = 0; i < Lista.getSize()-1; i++) {
                    for (int j = i+1; j < Lista.getSize(); j++) {
                        if(Lista.get(i)==Lista.get(j))
