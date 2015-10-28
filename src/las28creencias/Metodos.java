@@ -38,9 +38,7 @@ public class Metodos {
         creencias[25]="26. La muerte y la resurrección";
         creencias[26]="27. El milenio y el fin del pecado.";
         creencias[27]="28. La Tierra Nueva";
-    }
     
-    {
         indice[0]= 1;
         indice[1]= 2;
         indice[2]= 3;
@@ -125,5 +123,27 @@ public class Metodos {
        return creencias[k];
     }
 
-    
+     
+    String BusquedaBinaria(int dato)
+        { 
+         int centro,inicio=0,fin=indice.length-1;
+           String busqueda="no existe";
+          while(inicio<=fin)
+           {
+             centro=(fin+inicio)/2;
+             if(indice[centro]==dato)
+                 return creencias[centro];
+             else if( indice [centro]<dato  )
+               {
+                  inicio=centro+1;
+               }
+                else 
+                {
+                  fin=centro-1;
+                }
+             
+            }
+     
+      return busqueda;
+    }
 }
