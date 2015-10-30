@@ -46,6 +46,8 @@ public class Ventana extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("creencias de La Iglesia Adventista");
@@ -93,7 +95,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Serif", 3, 24)); // NOI18N
         jLabel2.setText("la  Iglesia Adventista  Del Séptimo Día");
 
-        jButton3.setText("Buscar");
+        jButton3.setText("Binaria");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -120,6 +122,15 @@ public class Ventana extends javax.swing.JFrame {
         });
 
         jLabel4.setText("Ordenar por:");
+
+        jLabel5.setText("Busqueda: ");
+
+        jButton6.setText("Lineal");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -153,8 +164,15 @@ public class Ventana extends javax.swing.JFrame {
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel3))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton6)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -188,7 +206,9 @@ public class Ventana extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(jButton4)
+                    .addComponent(jButton6)
+                    .addComponent(jLabel5))
                 .addGap(16, 16, 16))
         );
 
@@ -214,8 +234,9 @@ public class Ventana extends javax.swing.JFrame {
        {
            int num;
            num = Integer.parseInt(jTextField1.getText());
-           if(num>28)
-           { 
+           for (int i = 0; i < Lista.size(); i++) {
+                    if(Lista.get(i)=="No existe")Lista.remove(i);}
+           
                Lista.addElement(operacion.BusquedaBinaria(num));
                
                for (int i = 0; i < Lista.getSize()-1; i++) {
@@ -226,27 +247,13 @@ public class Ventana extends javax.swing.JFrame {
                        }
                    }
                } 
-           }
-           else
-           {
-               
-               Lista.addElement(operacion.BusquedaBinaria(num));
-              for (int i = 0; i < Lista.getSize()-1; i++) {
-                   for (int j = i+1; j < Lista.getSize(); j++) {
-                       if(Lista.get(i)==Lista.get(j))
-                        {
-                         Lista.remove(i);
-                        }
-                    }
-                }
-            }
+          
        }
        catch(Exception errordato)
        {
            JOptionPane.showMessageDialog(null, "dato erroneo\n ingrese solo numeros", "ERROR!", WIDTH);
-           jTextField1.setText("");
        }
-        
+         jTextField1.setText("");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -254,12 +261,39 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       
         Lista.clear();
         for (int i = 0; i < 28; i++) {
             Lista.addElement(operacion.OrdenarInsercion(i));
         }
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+       try
+       {
+           int num;
+           num = Integer.parseInt(jTextField1.getText());
+           
+             for (int i = 0; i < Lista.size(); i++) {
+                    if(Lista.get(i)=="No existe")Lista.remove(i);}
+             
+               Lista.addElement(operacion.BusquedaSelec(num));
+              
+               
+               for (int i = 0; i < Lista.getSize()-1; i++) {
+                   for (int j = i+1; j < Lista.getSize(); j++) {
+                       if(Lista.get(i)==Lista.get(j))
+                       {
+                         Lista.remove(i);
+                       }
+                   }
+               } 
+       }
+       catch(Exception errordato)
+       {
+           JOptionPane.showMessageDialog(null, "dato erroneo\n ingrese solo numeros", "ERROR!", WIDTH);
+       }   
+       jTextField1.setText("");
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -302,11 +336,13 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
