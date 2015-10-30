@@ -1,7 +1,4 @@
-
 package las28creencias;
-
-import java.util.ArrayList;
 
 public class Metodos {
     
@@ -127,7 +124,7 @@ public class Metodos {
     String BusquedaBinaria(int dato)
         { 
          int centro,inicio=0,fin=indice.length-1;
-           String busqueda="no existe";
+           String busqueda="No existe";
           while(inicio<=fin)
            {
              centro=(fin+inicio)/2;
@@ -164,4 +161,14 @@ public class Metodos {
        }
            return creencias[k];
         }
+    
+    String BusquedaSelec(int dato)
+    {
+        String Busqueda="No existe";
+        for (int i = 0; i < indice.length; i++) {
+            if(indice[i]==dato)
+                Busqueda=creencias[i];
+        }
+        return Busqueda;
+    }
 }
